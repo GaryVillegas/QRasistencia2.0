@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Administrador de Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Agregar Dato</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Identificador</ion-label>
+        <ion-input [(ngModel)]="nuevoDato.identificador"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nuevoDato.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input [(ngModel)]="nuevoDato.apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Carrera</ion-label>
+        <ion-input [(ngModel)]="nuevoDato.carrera"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="nuevoDato.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input [(ngModel)]="nuevoDato.password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="agregarDato()"
+        >Agregar Dato</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Datos Guardados</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let dato of datos">
+      <ion-label>
+        <h2>{{ dato.Nombre }}</h2>
+        <p>
+          {{ dato.identificador }} - {{ dato.Apellido }} - {{dato.carrera}} -
+          {{dato.email}}
+        </p>
+      </ion-label>
+      <ion-button color="danger" (click)="eliminarDato(dato.identificador)">
+        Eliminar
+      </ion-button>
+      <ion-button color="primary" (click)="obtenerDato(dato.identificador)">
+        Obtener
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

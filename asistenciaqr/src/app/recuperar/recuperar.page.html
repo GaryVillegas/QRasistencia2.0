@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="recuperar-box">
+    <ion-button class="recuperar-button back-button" routerLink="/login">
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+      Atrás
+    </ion-button>
+    <div class="recuperar-container">
+      <img
+        src="../../assets/icon/LogoDuoc.png"
+        alt="DuocUC Logo"
+        class="logo"
+      />
+      <h2 class="my-4">Recuperar contraseña</h2>
+      <form>
+        <ion-item>
+          <ion-input
+            type="email"
+            placeholder="Correo@duoc.cl"
+            class="custom-input"
+          >
+            <ion-icon name="at-outline" slot="start"></ion-icon
+          ></ion-input>
+        </ion-item>
+        <ion-button expand="block" class="recuperar-button" type="submit"
+          >Recuperar</ion-button
+        >
+      </form>
+    </div>
+  </div>
+</ion-content>

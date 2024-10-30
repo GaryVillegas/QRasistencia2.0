@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@angular/cli": "^18.2.10",
+    "@angular/common": "^18.2.10",
+    "@ionic/cli": "^7.2.0",
+    "@ionic/storage-angular": "^4.0.0"
+  }
+}
